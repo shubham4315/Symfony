@@ -22,6 +22,8 @@ class QuestionController extends AbstractController{
             'Honestly, I like furry shoes better than My cat',
             'Maybe... try saving the spell backwards?',
         ];
+
+        dump($slug,$this);
         return $this->render('question/show.html.twig',[
             'question'=>ucwords(str_replace('-',' ',$slug)),
             'answers'=>$answers
